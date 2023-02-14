@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // importing pages for the App
 import Home from "./pages/Home";
@@ -12,10 +13,15 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <h3>Abhaya</h3>
-      {/* <Navbar /> */}
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/cocktail/:id" element={<SingleCocktail />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
