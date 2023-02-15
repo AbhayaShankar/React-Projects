@@ -4,12 +4,12 @@ import Loading from "./Loading";
 import { useGlobalContext } from "../context/Context";
 
 export default function CocktailList() {
-  const { loading, searchTerm } = useGlobalContext();
-
+  const { loading, cocktails } = useGlobalContext();
+  console.log(cocktails);
   if (loading) {
     return <Loading />;
   }
-  if (Cocktail.length < 1) {
+  if (cocktails.length < 1) {
     return (
       <h2 className="section-title">
         No cocktails matched your search criteria
@@ -17,5 +17,14 @@ export default function CocktailList() {
     );
   }
 
-  return <div>CocktailList</div>;
+  return (
+    <section className="section">
+      <h2 className="section-title">cocktails</h2>
+      <div className="cocktails-center">
+        {cocktails.map((cocktail) => {
+          return <Cocktail key={cocktail.id} {...cocktail} />;
+        })}
+      </div>
+    </section>
+  );
 }
