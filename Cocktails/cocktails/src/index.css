@@ -4,17 +4,17 @@ Variables
 ======
 */
 :root {
-  --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
+  --primaryLightColor: #e6a5a5;
+  --primaryColor: #d0e3c2;
   --primaryDarkColor: #c02c03;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBackground: #f1f5f8;
-  --mainOverlay: rgba(35, 10, 36, 0.4);
-  --mainBlack: #222;
+  --mainWhite: #4d4d4d;
+  --offWhite: #c0c0c0;
+  --mainBackground: #252627;
+  --mainOverlay: rgba(230, 202, 231, 0.4);
+  --mainBlack: #ffffff;
   --mainGrey: #ececec;
-  --darkGrey: #afafaf;
-  --mainRed: #bd0303;
+  --darkGrey: #6e6e6e;
+  --mainRed: #b32a2a;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -131,8 +131,16 @@ Buttons
 Navbar
 ======
 */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(8px);
+}
+
 .navbar {
-  background: var(--mainWhite);
+  background: rgba(36, 36, 36, 0.8);
   height: 5rem;
   display: flex;
   align-items: center;
@@ -168,6 +176,16 @@ Navbar
 .logo {
   width: 12rem;
 }
+
+/* .blob {
+  position: sticky;
+  width: 40%;
+  height: 40%;
+  left: 50px;
+  top: 0;
+  z-index: -1;
+} */
+
 /* 
 ====== 
 About
