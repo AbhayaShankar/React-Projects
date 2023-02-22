@@ -1,10 +1,11 @@
 import React from "react";
 import "./Sidebar.css";
+import sidebarLogo from "../Resources/Images/sidebar-logo.png";
 
 function Sidebar() {
   return (
     <div className="sidebar">
-      <h1>I am Sidebar</h1>
+      <img className="sidebar-logo" src={sidebarLogo} alt="sidebar-logo" />
     </div>
   );
 }
