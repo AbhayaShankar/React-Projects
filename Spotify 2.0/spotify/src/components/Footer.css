@@ -1,7 +1,6 @@
 .footer {
   background-color: #afafaf;
   backdrop-filter: blur(6px);
-  border: 1px solid rgb(41, 104, 9);
   height: 60px;
   position: sticky;
   padding: 10px 25px;
