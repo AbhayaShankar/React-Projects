@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
-  margin: 10px 30px;
+  margin: 5px 30px;
 }
 
 .header-logo {
@@ -40,7 +40,7 @@
 }
 
 .header-right {
-  margin: 10px 30px;
+  margin: 5px 30px;
 }
 
 .header-right h3 {

@@ -2,13 +2,15 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <div className="app">
       <Router>
+        <Header />
         <Routes>
-          <Route index path="/" element={<Header />}></Route>
+          <Route index path="/" element={<Home />}></Route>
           <Route
             index
             path="/movie/:id"
