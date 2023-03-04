@@ -32,8 +32,10 @@ function Home() {
           autoPlay={true}
           showArrows={true}
           infiniteLoop={true}
-          transitionTime={1}
+          transitionTime={3}
           showStatus={false}
+          stopOnHover={true}
+          carouselStartIndex={0}
         >
           {popularMovies.map((movie) => {
             return (
@@ -41,7 +43,7 @@ function Home() {
                 style={{ textDecoration: "none", color: "white" }}
                 to={`/movie/${movie.id}`}
               >
-                <div className="posterImage">
+                <div key={movie.id} className="posterImage">
                   <img
                     src={`https://image.tmdb.org/t/p/original${
                       movie && movie.backdrop_path

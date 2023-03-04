@@ -1,9 +1,13 @@
 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   color: white;
   display: flex;
+  z-index: 5;
+  backdrop-filter: blur(20px);
+  /* background-color: rgb(34, 34, 34); */
   align-items: center;
   justify-content: space-between;
   -webkit-box-shadow: 1px 1px 2px 0px rgba(212, 208, 211, 1);
@@ -36,6 +40,7 @@
 .header-left a:hover {
   /* font-weight: 600; */
   letter-spacing: 0.4px;
+  transition: 0.25s ease-in-out;
   color: rgb(176, 174, 174);
 }
 
