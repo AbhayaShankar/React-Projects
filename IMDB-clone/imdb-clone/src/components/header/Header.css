@@ -1,0 +1,52 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(212, 208, 211, 1);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(212, 208, 211, 1);
+  box-shadow: 1px 1px 2px 0px rgba(212, 208, 211, 1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  margin: 10px 30px;
+}
+
+.header-logo {
+  width: 100px;
+}
+
+.header-left a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 10px;
+  letter-spacing: 0.4px;
+  color: Gray;
+  text-decoration: none;
+}
+
+.header-left a:hover {
+  /* font-weight: 600; */
+  letter-spacing: 0.4px;
+  color: rgb(176, 174, 174);
+}
+
+.header-right {
+  margin: 10px 30px;
+}
+
+.header-right h3 {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-family: 400;
+  letter-spacing: 2px;
+  color: gray;
+}
