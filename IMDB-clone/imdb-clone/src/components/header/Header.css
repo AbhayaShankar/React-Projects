@@ -5,7 +5,7 @@
   left: 0;
   color: white;
   display: flex;
-  z-index: 5;
+  z-index: 10000;
   backdrop-filter: blur(20px);
   /* background-color: rgb(34, 34, 34); */
   align-items: center;
