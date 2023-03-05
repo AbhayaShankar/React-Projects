@@ -6,6 +6,11 @@
 .posterImage > img {
   margin: auto;
   width: 100%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  object-fit: contain;
+  left: 50%;
+  top: 70%;
 }
 
 .posterImage:hover {

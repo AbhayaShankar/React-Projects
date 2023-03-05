@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 import { Icon } from "@mui/material";
+import MovieList from "../../components/movieList/MovieList";
 
 function Home() {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -78,6 +79,7 @@ function Home() {
             );
           })}
         </Carousel>
+        <MovieList />
       </div>
     </div>
   );

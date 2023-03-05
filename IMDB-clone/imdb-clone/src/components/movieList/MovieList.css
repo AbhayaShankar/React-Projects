@@ -1,10 +1,17 @@
 .movie__list {
-  padding: 0 3rem 3rem 3rem;
+  padding: 0 3rem 2rem 3rem;
 }
 
 .movieList__title {
-  font-size: 1.75rem;
-  margin: 2.5rem;
+  font-size: 2.5rem;
+  margin: 3rem;
+  color: rgb(178, 176, 176);
+  letter-spacing: 5px;
+  font-weight: 400;
+  font-family: "Gloock", serif;
+  background: linear-gradient(to right, #ffffff, #bababa, #7e7e7e, #595959);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .list__cards {

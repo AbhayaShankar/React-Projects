@@ -13,7 +13,7 @@ function MovieList() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 4500);
   }, []);
 
   useEffect(() => {
@@ -31,14 +31,14 @@ function MovieList() {
     setIsLoading(true);
     const res = await fetch(
       `https://api.themoviedb.org/3/movie/${
-        type ? type : "popular"
+        type ? type : "upcoming"
       }?api_key=f96b20d81006ea5ddd8f1aaf0adbc828&language=en-US&page=1`
     );
-    setIsLoading(false);
     const data = await res.json();
     const result = data.results;
     console.log(result);
     setMovieList(result);
+    setIsLoading(false);
   };
 
   return (
@@ -52,7 +52,7 @@ function MovieList() {
       ) : (
         <div className="movie__list">
           <h2 className="movieList__title">
-            {((type ? type : "Popular") + " Movies").toUpperCase()}
+            {((type ? type : "Upcoming") + " Movies . . .").toUpperCase()}
           </h2>
           <div className="list__cards">
             {movieList.map((movie) => (

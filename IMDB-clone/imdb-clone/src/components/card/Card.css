@@ -82,6 +82,7 @@
   padding: 15px 10px;
   justify-content: flex-end;
   opacity: 0;
+  transition: opacity 200ms;
 }
 
 .cards__overlay:hover {
