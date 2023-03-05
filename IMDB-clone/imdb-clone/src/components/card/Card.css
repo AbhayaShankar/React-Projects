@@ -16,7 +16,7 @@
 
 .cards:hover {
   transform: scale(1.2);
-  transition: 250ms ease-in-out;
+  transition: 150ms linear;
   z-index: 1000;
   background-color: rgb(150, 150, 150, 0.15);
 
