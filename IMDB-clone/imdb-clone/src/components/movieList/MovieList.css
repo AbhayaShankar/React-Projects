@@ -9,28 +9,108 @@
   letter-spacing: 5px;
   font-weight: 400;
   font-family: "Gloock", serif;
-  background: linear-gradient(to right, #ffffff, #bababa, #7e7e7e, #595959);
+  background: linear-gradient(
+    to bottom right,
+    #b7b7b7,
+    #a1a1a1,
+    #7e7e7e,
+    #595959
+  );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  animation: color-change 3s infinite;
+  animation: animate 3s linear infinite;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(173, 173, 173, 0.603);
+  /* animation: color-change 3s ease-in-out 3s infinite; */
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 @keyframes color-change {
   0% {
-    color: white;
+    color: #bababa;
+    background-position: 0;
+  }
+  5% {
+    background-position: 100vh;
+  }
+  10% {
+    color: #bababa;
+    background-position: 0;
+  }
+  15% {
+    background-position: 100vh;
+  }
+  20% {
+    color: #bababa;
+    background-position: 0;
   }
   25% {
-    color: rgb(187, 187, 187);
+    background-position: 100vh;
   }
-
+  30% {
+    color: #bababa;
+    background-position: 0;
+  }
+  35% {
+    background-position: 100vh;
+  }
+  40% {
+    color: #bababa;
+    background-position: 0;
+  }
+  45% {
+    background-position: 100vh;
+  }
   50% {
-    color: rgb(144, 144, 144);
+    color: #bababa;
+    background-position: 0;
+  }
+  55% {
+    background-position: 100vh;
+  }
+  60% {
+    color: #bababa;
+    background-position: 0;
+  }
+  65% {
+    background-position: 100vh;
+  }
+  70% {
+    color: #bababa;
+    background-position: 0;
   }
   75% {
-    color: rgb(80, 80, 80);
+    background-position: 100vh;
+  }
+  80% {
+    color: #bababa;
+    background-position: 0;
+  }
+  85% {
+    background-position: 100vh;
+  }
+  90% {
+    color: #bababa;
+    background-position: 0;
+  }
+  95% {
+    background-position: 100vh;
   }
   100% {
-    color: rgb(52, 52, 52);
+    color: #bababa;
+    background-position: 0;
   }
 }
 
