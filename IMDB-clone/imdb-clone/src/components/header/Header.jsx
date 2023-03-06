@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import imdb from "../../media/imdb.png";
 import "./Header.css";
+import SearchIcon from "@mui/icons-material/Search";
 
 function Header() {
   return (
@@ -15,7 +16,17 @@ function Header() {
         <Link to="/movies/upcoming">Upcoming</Link>
       </div>
       <div className="header-right">
-        <h3>Search Box</h3>
+        <SearchIcon className="header__search__icon" sx={{ color: "black" }} />
+        {/* <h3>Search Box</h3> */}
+        <form className="form" type="search">
+          <input
+            type="text"
+            className="search__form"
+            placeholder="Enter your search"
+          />
+
+          <button className="search__form__button">Search</button>
+        </form>
       </div>
     </div>
   );

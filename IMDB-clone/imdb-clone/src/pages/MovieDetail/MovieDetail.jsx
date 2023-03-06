@@ -38,7 +38,7 @@ const MovieDetail = () => {
             </div>
             <div className="movie__rating">
               <p>
-                ⭐ {detail.vote_average} | {detail.vote_count}
+                ⭐ {detail.vote_average} | ( {detail.vote_count} )
               </p>
             </div>
           </div>

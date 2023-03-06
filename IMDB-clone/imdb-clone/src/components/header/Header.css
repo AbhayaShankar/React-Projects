@@ -46,6 +46,9 @@
 
 .header-right {
   margin: 5px 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .header-right h3 {
@@ -54,4 +57,45 @@
   font-family: 400;
   letter-spacing: 2px;
   color: gray;
+}
+
+.header__search__icon {
+  position: absolute;
+  left: 5px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.search__form {
+  padding: 8px 15px 8px 30px;
+  border-radius: 20px;
+}
+
+.search__form::placeholder {
+  font-size: 14px;
+
+  letter-spacing: 0.25px;
+}
+
+.search__form__button {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px 12px;
+  margin-left: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: rgba(143, 143, 143, 0.185);
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.5px;
+  transition: 0.3s linear;
+}
+
+.search__form__button:hover {
+  background-color: rgba(240, 255, 255, 0.677);
+  color: black;
 }
