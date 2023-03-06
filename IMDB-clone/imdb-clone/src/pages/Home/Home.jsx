@@ -49,7 +49,7 @@ function Home({ search, dispSearch, setDispSearch }) {
   }, [search]);
 
   return (
-    <div>
+    <div className="hero__container">
       {dispSearch ? (
         <SearchComp searchMovie={searchMovie} />
       ) : (

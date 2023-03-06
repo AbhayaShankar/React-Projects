@@ -5,11 +5,15 @@ import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-function Header({ search, handleChange, handleSearch }) {
+function Header({ search, setSearch, handleChange, handleSearch }) {
+  const handleHome = () => {
+    setSearch("");
+  };
+
   return (
     <div className="header">
       <div className="header-left">
-        <Link to="/">
+        <Link onClick={handleHome} to="/">
           <img className="header-logo" src={imdb} alt="imdb-logo" />
         </Link>
         <Link to="/movies/popular">Popular</Link>

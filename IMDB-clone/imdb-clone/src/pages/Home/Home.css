@@ -1,3 +1,7 @@
+.hero__container {
+  margin-top: 63px;
+}
+
 .posterImage {
   height: 600px;
   object-fit: contain;
