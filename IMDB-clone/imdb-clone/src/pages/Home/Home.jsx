@@ -7,6 +7,7 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 import { Icon } from "@mui/material";
 import MovieList from "../../components/movieList/MovieList";
+import SearchComp from "../../components/SearchComp/SearchComp";
 
 function Home({ search }) {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -14,6 +15,8 @@ function Home({ search }) {
   const [searchMovie, setSearchMovie] = useState(search);
   console.log("SEARCH MOVIE", searchMovie);
   console.log("SEARCH DATA", search);
+
+  const [dispSearch, setDispSearch] = useState(false);
 
   useEffect(() => {
     const getMovies = async () => {
@@ -40,6 +43,7 @@ function Home({ search }) {
     };
 
     getSearchMovie();
+    setDispSearch(true);
   }, [search]);
 
   return (
@@ -96,7 +100,7 @@ function Home({ search }) {
             );
           })}
         </Carousel>
-        <MovieList />
+        {dispSearch ? <SearchComp /> : <MovieList />}
       </div>
     </div>
   );
