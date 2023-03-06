@@ -42,7 +42,7 @@ function MovieList() {
   };
 
   return (
-    <div>
+    <div className="movie__list__container">
       {isLoading ? (
         <div className="cards">
           <SkeletonTheme color="#202020" highlightColor="#444">

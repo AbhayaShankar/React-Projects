@@ -26,6 +26,7 @@ function App() {
           search={search}
           handleChange={handleChange}
           handleSearch={handleSearch}
+          setSearch={setSearch}
         />
         <Routes>
           <Route
