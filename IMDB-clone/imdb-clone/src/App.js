@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Home from "./pages/Home/Home";
 import MovieList from "./components/movieList/MovieList";
 import MovieDetail from "./pages/MovieDetail/MovieDetail";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -34,6 +35,7 @@ function App() {
             path="/"
             element={
               <Home
+                setSearch={setSearch}
                 search={search}
                 dispSearch={dispSearch}
                 setDispSearch={setDispSearch}
@@ -45,6 +47,7 @@ function App() {
           <Route path="/*" element={<h2>404 Error Page</h2>}></Route>
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

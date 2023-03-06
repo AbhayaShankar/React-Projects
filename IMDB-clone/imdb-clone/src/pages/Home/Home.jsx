@@ -9,7 +9,7 @@ import { Icon } from "@mui/material";
 import MovieList from "../../components/movieList/MovieList";
 import SearchComp from "../../components/SearchComp/SearchComp";
 
-function Home({ search, dispSearch, setDispSearch }) {
+function Home({ search, dispSearch, setDispSearch, setSearch }) {
   const [popularMovies, setPopularMovies] = useState([]);
 
   const [searchMovie, setSearchMovie] = useState(search);
@@ -51,7 +51,11 @@ function Home({ search, dispSearch, setDispSearch }) {
   return (
     <div className="hero__container">
       {dispSearch ? (
-        <SearchComp searchMovie={searchMovie} />
+        <SearchComp
+          searchMovie={searchMovie}
+          search={search}
+          setSearch={setSearch}
+        />
       ) : (
         <div className="carousel-slider">
           <Carousel

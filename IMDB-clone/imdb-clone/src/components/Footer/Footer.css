@@ -1,0 +1,18 @@
+.footer {
+  width: 100vh;
+  background-color: rgb(183, 101, 101) !important;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.icon:hover {
+  color: black;
+}

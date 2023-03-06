@@ -1,5 +1,5 @@
 .movie__list__container {
-  margin-top: 63px;
+  margin-top: 83px;
 }
 
 .movie__list {
@@ -7,7 +7,7 @@
 }
 
 .movieList__title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 3rem;
   color: rgb(178, 176, 176);
   letter-spacing: 5px;
