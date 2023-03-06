@@ -24,12 +24,12 @@
 }
 
 .header-logo {
-  width: 100px;
+  width: 80px;
 }
 
 .header-left a {
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   margin-right: 10px;
   letter-spacing: 0.4px;
@@ -61,7 +61,7 @@
 
 .header__search__icon {
   position: absolute;
-  left: 5px;
+  left: 6px;
 }
 
 .form {
@@ -70,8 +70,14 @@
 }
 
 .search__form {
-  padding: 8px 15px 8px 30px;
+  padding: 6px 85px 6px 40px;
   border-radius: 20px;
+  border: 1px solid rgb(176, 174, 174);
+  outline: none;
+  color: rgba(255, 255, 255, 0.874);
+  font-size: 16px;
+  letter-spacing: 2px;
+  background-color: transparent;
 }
 
 .search__form::placeholder {
@@ -88,14 +94,29 @@
   margin-left: 20px;
   border-radius: 12px;
   cursor: pointer;
-  border: 2px solid white;
+  border: none;
   background-color: rgba(143, 143, 143, 0.185);
   color: rgb(255, 255, 255);
   letter-spacing: 0.5px;
+  outline: none;
   transition: 0.3s linear;
 }
 
 .search__form__button:hover {
   background-color: rgba(240, 255, 255, 0.677);
   color: black;
+}
+
+.header-right-right {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-right-right > h3 {
+  letter-spacing: 2px;
+  font-weight: 300;
+  color: rgb(176, 174, 174);
+  font-family: "Montserrat", sans-serif;
 }
