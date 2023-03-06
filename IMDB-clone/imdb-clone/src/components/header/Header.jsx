@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import imdb from "../../media/imdb.png";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 
-function Header() {
+function Header({ search, handleChange, handleSearch }) {
   return (
     <div className="header">
       <div className="header-left">
@@ -22,6 +22,9 @@ function Header() {
           <input
             type="text"
             className="search__form"
+            onChange={handleChange}
+            value={search}
+            onKeyDown={handleSearch}
             placeholder="Enter your search"
           />
 

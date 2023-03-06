@@ -8,8 +8,12 @@ import StarIcon from "@mui/icons-material/Star";
 import { Icon } from "@mui/material";
 import MovieList from "../../components/movieList/MovieList";
 
-function Home() {
+function Home({ search }) {
   const [popularMovies, setPopularMovies] = useState([]);
+
+  const [searchMovie, setSearchMovie] = useState(search);
+  console.log("SEARCH MOVIE", searchMovie);
+  console.log("SEARCH DATA", search);
 
   useEffect(() => {
     const getMovies = async () => {
@@ -24,6 +28,19 @@ function Home() {
 
     getMovies();
   }, []);
+
+  useEffect(() => {
+    const getSearchMovie = async () => {
+      const res = await fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=f96b20d81006ea5ddd8f1aaf0adbc828&language=en-US&query=${search}&page=1&include_adult=false`
+      );
+      const data = await res.json();
+      setSearchMovie(search);
+      console.log("search data", data);
+    };
+
+    getSearchMovie();
+  }, [search]);
 
   return (
     <div>
