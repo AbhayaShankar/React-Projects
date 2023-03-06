@@ -50,60 +50,64 @@ function Home({ search, dispSearch, setDispSearch }) {
 
   return (
     <div>
-      <div className="carousel-slider">
-        <Carousel
-          showThumbs={false}
-          autoPlay={true}
-          showArrows={true}
-          infiniteLoop={true}
-          transitionTime={3}
-          showStatus={false}
-          stopOnHover={true}
-          carouselStartIndex={0}
-        >
-          {popularMovies.map((movie) => {
-            return (
-              <Link
-                style={{ textDecoration: "none", color: "white" }}
-                to={`/movie/${movie.id}`}
-              >
-                <div key={movie.id} className="posterImage">
-                  <img
-                    src={`https://image.tmdb.org/t/p/original${
-                      movie && movie.backdrop_path
-                    }`}
-                    alt="movie-poster"
-                  />
-                </div>
-                <div className="poster__overlay">
-                  <div className="poster__title">
-                    {movie ? movie.original_title : ""}
+      {dispSearch ? (
+        <SearchComp searchMovie={searchMovie} />
+      ) : (
+        <div className="carousel-slider">
+          <Carousel
+            showThumbs={false}
+            autoPlay={true}
+            showArrows={true}
+            infiniteLoop={true}
+            transitionTime={3}
+            showStatus={false}
+            stopOnHover={true}
+            carouselStartIndex={0}
+          >
+            {popularMovies.map((movie) => {
+              return (
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to={`/movie/${movie.id}`}
+                >
+                  <div key={movie.id} className="posterImage">
+                    <img
+                      src={`https://image.tmdb.org/t/p/original${
+                        movie && movie.backdrop_path
+                      }`}
+                      alt="movie-poster"
+                    />
                   </div>
-                  <div className="poster__release">
-                    {movie ? movie.release_date : ""}
-                    <span className="poster__rating">
-                      {" "}
-                      {movie.vote_average}
-                      <StarIcon
-                        sx={{
-                          color: "#ffc600",
-                          fontSize: "32px",
-                          paddingTop: "6px",
-                          marginLeft: "6px",
-                        }}
-                      />
-                    </span>
+                  <div className="poster__overlay">
+                    <div className="poster__title">
+                      {movie ? movie.original_title : ""}
+                    </div>
+                    <div className="poster__release">
+                      {movie ? movie.release_date : ""}
+                      <span className="poster__rating">
+                        {" "}
+                        {movie.vote_average}
+                        <StarIcon
+                          sx={{
+                            color: "#ffc600",
+                            fontSize: "32px",
+                            paddingTop: "6px",
+                            marginLeft: "6px",
+                          }}
+                        />
+                      </span>
+                    </div>
+                    <div className="poster__desc">
+                      {movie ? movie.overview : ""}
+                    </div>
                   </div>
-                  <div className="poster__desc">
-                    {movie ? movie.overview : ""}
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
-        </Carousel>
-        {dispSearch ? <SearchComp searchMovie={searchMovie} /> : <MovieList />}
-      </div>
+                </Link>
+              );
+            })}
+          </Carousel>
+          <MovieList />
+        </div>
+      )}
     </div>
   );
 }
