@@ -7,7 +7,8 @@ import MovieList from "./components/movieList/MovieList";
 import MovieDetail from "./pages/MovieDetail/MovieDetail";
 
 function App() {
-  const [search, setSearch] = useState("John Wick");
+  const [search, setSearch] = useState("");
+  const [dispSearch, setDispSearch] = useState(false);
 
   const handleChange = (e) => {
     console.log(e.target.value);
@@ -27,7 +28,17 @@ function App() {
           handleSearch={handleSearch}
         />
         <Routes>
-          <Route index path="/" element={<Home search={search} />}></Route>
+          <Route
+            index
+            path="/"
+            element={
+              <Home
+                search={search}
+                dispSearch={dispSearch}
+                setDispSearch={setDispSearch}
+              />
+            }
+          ></Route>
           <Route path="/movie/:id" element={<MovieDetail />}></Route>
           <Route path="/movies/:type" element={<MovieList />}></Route>
           <Route path="/*" element={<h2>404 Error Page</h2>}></Route>

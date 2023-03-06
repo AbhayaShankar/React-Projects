@@ -9,14 +9,12 @@ import { Icon } from "@mui/material";
 import MovieList from "../../components/movieList/MovieList";
 import SearchComp from "../../components/SearchComp/SearchComp";
 
-function Home({ search }) {
+function Home({ search, dispSearch, setDispSearch }) {
   const [popularMovies, setPopularMovies] = useState([]);
 
   const [searchMovie, setSearchMovie] = useState(search);
   console.log("SEARCH MOVIE", searchMovie);
   console.log("SEARCH DATA", search);
-
-  const [dispSearch, setDispSearch] = useState(false);
 
   useEffect(() => {
     const getMovies = async () => {
@@ -38,12 +36,16 @@ function Home({ search }) {
         `https://api.themoviedb.org/3/search/movie?api_key=f96b20d81006ea5ddd8f1aaf0adbc828&language=en-US&query=${search}&page=1&include_adult=false`
       );
       const data = await res.json();
-      setSearchMovie(search);
+      if (search !== "") {
+        setDispSearch(true);
+      } else {
+        setDispSearch(false);
+      }
+      setSearchMovie(data.results);
       console.log("search data", data);
     };
 
     getSearchMovie();
-    setDispSearch(true);
   }, [search]);
 
   return (
@@ -100,7 +102,7 @@ function Home({ search }) {
             );
           })}
         </Carousel>
-        {dispSearch ? <SearchComp /> : <MovieList />}
+        {dispSearch ? <SearchComp searchMovie={searchMovie} /> : <MovieList />}
       </div>
     </div>
   );

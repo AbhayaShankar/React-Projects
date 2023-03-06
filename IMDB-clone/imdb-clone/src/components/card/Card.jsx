@@ -3,6 +3,8 @@ import "./Card.css";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Link } from "react-router-dom";
+import NA from "../../media/NA.png";
+import NA2 from "../../media/NA2.jfif";
 // import StarIcon from "@mui/icons-material/Star";
 
 function Card({ movie }) {
@@ -28,13 +30,17 @@ function Card({ movie }) {
           to={`/movie/${movie.id}`}
         >
           <div className="cards">
-            <img
-              className="cards__img"
-              src={`https://image.tmdb.org/t/p/original${
-                movie && movie.backdrop_path
-              }`}
-              alt="movie-poster"
-            />
+            {movie.backdrop_path ? (
+              <img
+                className="cards__img"
+                src={`https://image.tmdb.org/t/p/original${
+                  movie && movie.backdrop_path
+                }`}
+                alt="movie-poster"
+              />
+            ) : (
+              <img src={NA2} alt="not-available" className="cards__img" />
+            )}
             <div className="cards__overlay">
               <div className="cards__title">
                 {movie ? movie.original_title : ""}
