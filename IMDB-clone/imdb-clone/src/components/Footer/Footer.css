@@ -1,18 +1,38 @@
 .footer {
-  width: 100vh;
-  background-color: rgb(183, 101, 101) !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(54, 54, 54, 0.744) !important;
   height: 50px;
-  position: fixed;
+  /* position: fixed; */
+  -webkit-box-shadow: 1px 0px 4px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 1px 0px 4px 0px rgba(255, 255, 255, 1);
+  box-shadow: 1px 0px 4px 0px rgba(255, 255, 255, 1);
   bottom: 0;
+  font-family: "Genos", sans-serif;
+}
+
+.footer__left {
+  margin-left: 30px;
+  font-size: 22px;
+  letter-spacing: 1.25px;
 }
 
 .socials {
+  margin-top: 5px;
+  width: 950px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .icon:hover {
-  color: black;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__author {
+  font-size: 22px;
+  letter-spacing: 1.75px;
+  font-family: "Genos", sans-serif;
 }
