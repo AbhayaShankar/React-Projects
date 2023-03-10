@@ -2,6 +2,10 @@
   margin-top: 83px;
 }
 
+.search__container {
+  padding-bottom: 50px;
+}
+
 .movie__list {
   padding: 0 3rem 2rem 3rem;
 }

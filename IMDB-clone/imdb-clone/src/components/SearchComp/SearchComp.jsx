@@ -15,7 +15,7 @@ function SearchComp({ searchMovie, search, setSearch }) {
   }, []);
 
   return (
-    <div>
+    <div className="search__container">
       {searchMovie.length !== 0 ? (
         <div>
           {isLoading ? (

@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: rgba(54, 54, 54, 0.744) !important;
+  background-color: rgba(54, 54, 54, 0.848) !important;
   height: 50px;
   /* position: fixed; */
   -webkit-box-shadow: 1px 0px 4px 0px rgba(255, 255, 255, 1);
@@ -10,6 +10,9 @@
   box-shadow: 1px 0px 4px 0px rgba(255, 255, 255, 1);
   bottom: 0;
   font-family: "Genos", sans-serif;
+  /* position: fixed;
+  bottom: 0;
+  z-index: 10000; */
 }
 
 .footer__left {
