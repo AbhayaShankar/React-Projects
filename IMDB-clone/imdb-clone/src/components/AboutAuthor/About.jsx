@@ -18,7 +18,7 @@ function About() {
           <br /> <br />
           Welcome to my{" "}
           <span>
-            <Link to={"/"}>TelMe Movies App</Link>
+            <Link to={"/"}>Cinetrek App</Link>
           </span>{" "}
           , built with
           <span> ReactJS </span>

@@ -14,7 +14,7 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
     <div className="header">
       <div className="header-left">
         <Link onClick={handleHome} to="/">
-          <img className="header-logo" src={imdb} alt="imdb-logo" />
+          <p className="cinetrek"> Cinetrek</p>
         </Link>
         <Link to="/movies/popular">Popular</Link>
         <Link to="/movies/top_rated">Top Rated</Link>
