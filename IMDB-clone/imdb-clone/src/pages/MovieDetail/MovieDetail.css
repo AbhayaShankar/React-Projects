@@ -114,6 +114,7 @@
   gap: 35px;
   left: 650px;
   top: 575px;
+  margin-top: 40px;
 }
 
 .movie__link > a {
@@ -133,7 +134,7 @@
 }
 
 .movie__reviews {
-  margin: 25px auto 50px;
+  margin: 25px auto;
   width: 1000px;
   font-family: "Inter", sans-serif;
 }
@@ -147,7 +148,7 @@
   text-align: center;
   color: #575757b5;
   margin-top: 50px;
-  /* margin-bottom: 100px; */
+  margin-bottom: 100px;
 }
 
 .no__reviews {
