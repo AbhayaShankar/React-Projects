@@ -6,6 +6,7 @@ import { yellow } from "@mui/material/colors";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import sorry from "../../media/sorry.jpg";
 import sorry2 from "../../media/sorry2.jpg";
+import cinema from "../../media/cinema.jpg";
 
 const MovieDetail = () => {
   const [detail, setDetail] = useState([]);
@@ -107,8 +108,11 @@ const MovieDetail = () => {
         </div>
       </div>
       <div className="movie__reviews">
-        {review.results > 0 ? (
-          <h1 className="review__head">Why Watch this? Honest Reviews - </h1>
+        {review.length > 0 ? (
+          <div className="no__reviews">
+            <img src={cinema} alt="" />
+            <h1 className="review__head">Why Watch this? Honest Reviews - </h1>
+          </div>
         ) : (
           <div className="no__reviews">
             <img src={sorry2} alt="" />

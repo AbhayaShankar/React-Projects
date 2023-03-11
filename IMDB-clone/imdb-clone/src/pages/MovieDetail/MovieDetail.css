@@ -133,7 +133,7 @@
 }
 
 .movie__reviews {
-  margin: 25px auto;
+  margin: 25px auto 50px;
   width: 1000px;
   font-family: "Inter", sans-serif;
 }
@@ -154,6 +154,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 25px;
 }
 
 .no__reviews > img {
@@ -161,7 +162,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
   opacity: 0.85;
 }
 
@@ -176,6 +177,7 @@
 
 .review__author {
   font-size: 22px;
+  font-weight: 400;
   letter-spacing: 0.5px;
   margin-bottom: 0px;
 }
@@ -185,7 +187,8 @@
   color: #ffffff66;
   font-weight: 200;
   letter-spacing: 0.25px;
-  line-height: 23px;
+  line-height: 28px;
+  text-align: justify;
 }
 
 .review > hr {
