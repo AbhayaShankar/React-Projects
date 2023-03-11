@@ -131,3 +131,66 @@
 .movie__link > a:hover {
   background-color: rgb(96, 96, 96);
 }
+
+.movie__reviews {
+  margin: 25px auto;
+  width: 1000px;
+  font-family: "Inter", sans-serif;
+}
+
+.review__head {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3.25px;
+  font-weight: 800;
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #575757b5;
+}
+
+.review__head > hr {
+  border: 0;
+  border-style: dotted;
+}
+
+.review__author {
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  margin-bottom: 0px;
+}
+
+.review__content {
+  font-size: 14px;
+  color: #ffffff66;
+  font-weight: 200;
+  letter-spacing: 0.25px;
+}
+
+.review > hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-color: #6f6f6f;
+  width: 95%;
+  margin: 10px auto 20px;
+}
+
+.review__top {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.review__author__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.review__url {
+  text-decoration: none;
+  color: rgba(224, 224, 224, 0.81);
+}
+
+.review__url:hover {
+  color: #ffc600;
+}
