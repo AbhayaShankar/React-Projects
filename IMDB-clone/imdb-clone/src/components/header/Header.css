@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
-  margin: 5px 30px;
+  margin: 8px 30px;
 }
 
 .header-logo {
@@ -85,7 +85,7 @@
 
 .header__search__icon {
   position: absolute;
-  left: 6px;
+  left: 8px;
 }
 
 .form {
@@ -94,7 +94,7 @@
 }
 
 .search__form {
-  padding: 6px 85px 6px 40px;
+  padding: 8px 105px 8px 40px;
   border-radius: 20px;
   border: 1px solid rgb(176, 174, 174);
   outline: none;
@@ -144,9 +144,9 @@
 .header-right-right > h3 {
   letter-spacing: 1.2px;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 16px;
   color: rgb(176, 174, 174);
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .about__author {

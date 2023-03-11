@@ -38,10 +38,10 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
           />
         </form>
       </div>
-      <div className="header-right-right">
+      {/* <div className="header-right-right">
         <h3>Abhaya Shankar</h3>
         <AccountCircleIcon sx={{ fontSize: 32, color: "#c9c9c9" }} />
-      </div>
+      </div> */}
     </div>
   );
 }
