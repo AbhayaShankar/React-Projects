@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: rgba(54, 54, 54, 0.848) !important;
   height: 50px;
   /* position: fixed; */
@@ -38,4 +39,8 @@
   font-size: 22px;
   letter-spacing: 1.75px;
   font-family: "Genos", sans-serif;
+}
+
+.footer__author {
+  margin-right: 20px;
 }

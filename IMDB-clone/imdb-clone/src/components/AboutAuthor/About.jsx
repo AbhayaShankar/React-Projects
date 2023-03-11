@@ -21,12 +21,10 @@ function About() {
             <Link to={"/"}>Cinetrek App</Link>
           </span>{" "}
           , built with
-          <span> ReactJS </span>
-          and
-          <span> MaterialUI! </span>
-          With this app, you can easily search for movies, filter them by{" "}
-          Popularity , Upcoming release dates, and Top Rated , and view reviews
-          from other users.
+          <span> ReactJS</span> and
+          <span> MaterialUI</span> With this app, you can easily search for
+          movies, filter them by Popularity , Upcoming release dates, and Top
+          Rated , and view reviews from other users.
           <br /> <br />
           To power this app, I've used the <span> TMDb</span> (The Movie
           Database) API, which provides a wealth of information about movies,

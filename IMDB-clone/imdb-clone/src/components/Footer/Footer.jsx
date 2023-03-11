@@ -8,7 +8,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 function Footer() {
   return (
     <div className="footer">
-      <div className="footer__left">Made with ❤️, Connect with me on: </div>
+      <div className="footer__left">Made with ❤️</div>
       <div className="socials">
         <a href="https://twitter.com/AbhayaShankar2">
           <TwitterIcon
