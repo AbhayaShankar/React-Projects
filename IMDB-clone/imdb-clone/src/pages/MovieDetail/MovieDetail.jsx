@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import OpenInNewRoundedIcon from "@mui/icons-material/OpenInNewRounded";
 import { yellow } from "@mui/material/colors";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import sorry from "../../media/sorry.jpg";
+import sorry2 from "../../media/sorry2.jpg";
 
 const MovieDetail = () => {
   const [detail, setDetail] = useState([]);
@@ -105,7 +107,16 @@ const MovieDetail = () => {
         </div>
       </div>
       <div className="movie__reviews">
-        <h1 className="review__head">Why Watch this? Honest Reviews - </h1>
+        {review.results > 0 ? (
+          <h1 className="review__head">Why Watch this? Honest Reviews - </h1>
+        ) : (
+          <div className="no__reviews">
+            <img src={sorry2} alt="" />
+            <h1 className="review__head">
+              <span> すみません </span>, No Reviews for this Movie{" "}
+            </h1>
+          </div>
+        )}
         {review.map((review) => (
           <div className="review">
             <div className="review__top">

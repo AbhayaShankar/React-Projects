@@ -1,0 +1,62 @@
+.about__me {
+  margin-top: 63px;
+  /* display: flex; */
+  /* height: 100vh; */
+  width: 100%;
+}
+
+.profile {
+  width: 100%;
+  height: 100%;
+}
+
+.profile__dp {
+  margin: 30px 415px;
+  opacity: 0.85;
+  height: 600px;
+  width: 700px;
+  object-fit: cover;
+  mix-blend-mode: lighten;
+  border-radius: 15px;
+  transition: 0.35s linear;
+  box-shadow: 0 1px 1px 1px;
+  -webkit-box-shadow: 1px 3px 3px 1px rgb(200, 200, 200);
+  -moz-box-shadow: 1px 1px 3px 1px rgb(200, 200, 200);
+  box-shadow: 1px 1px 3px 1px rgb(200, 200, 200);
+}
+
+.profile__dp:hover {
+  opacity: 1;
+}
+
+.profile__text {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 900px;
+  margin: 0 auto 80px;
+}
+
+.profile__about {
+  font-size: 14px;
+  font-weight: 200;
+  text-align: justify;
+  color: #b1b1b1;
+  letter-spacing: 2.5px;
+  line-height: 35px;
+  /* margin: 0 200px; */
+}
+
+.profile__about > span > a {
+  text-decoration: none;
+  color: #ffc800d7;
+}
+
+.profile__about > span {
+  color: #ffc800d7;
+  letter-spacing: 3px;
+  text-decoration: none;
+  border-bottom: 1px solid #ffc800d7;
+  padding-bottom: 1px;
+  font-weight: 400;
+}

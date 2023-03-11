@@ -146,6 +146,27 @@
   margin-bottom: 40px;
   text-align: center;
   color: #575757b5;
+  margin-top: 50px;
+  /* margin-bottom: 100px; */
+}
+
+.no__reviews {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.no__reviews > img {
+  margin-top: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.no__reviews > h1 > span {
+  color: rgb(178, 178, 178);
 }
 
 .review__head > hr {

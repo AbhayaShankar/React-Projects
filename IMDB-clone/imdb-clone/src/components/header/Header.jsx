@@ -19,6 +19,7 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
         <Link to="/movies/popular">Popular</Link>
         <Link to="/movies/top_rated">Top Rated</Link>
         <Link to="/movies/upcoming">Upcoming</Link>
+        <Link to="/about">About</Link>
       </div>
       <div className="header-right">
         <SearchIcon
@@ -38,11 +39,7 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
         </form>
       </div>
       <div className="header-right-right">
-        <h3>
-          <a className="about__author" href="">
-            Abhaya
-          </a>
-        </h3>
+        <h3>Abhaya Shankar</h3>
         <AccountCircleIcon sx={{ fontSize: 32, color: "#c9c9c9" }} />
       </div>
     </div>

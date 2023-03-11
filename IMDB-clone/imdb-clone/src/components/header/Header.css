@@ -123,5 +123,9 @@
 
 .about__author {
   text-decoration: none;
+  color: rgb(176, 174, 174);
+}
+
+.about__author:focus {
   color: white;
 }

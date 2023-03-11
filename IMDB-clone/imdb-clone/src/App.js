@@ -5,7 +5,9 @@ import Header from "./components/header/Header";
 import Home from "./pages/Home/Home";
 import MovieList from "./components/movieList/MovieList";
 import MovieDetail from "./pages/MovieDetail/MovieDetail";
+import About from "./components/AboutAuthor/About";
 import Footer from "./components/Footer/Footer";
+import Error from "./components/Error/Error";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -42,12 +44,15 @@ function App() {
               />
             }
           ></Route>
+          <Route path="/about" element={<About />}></Route>
           <Route path="/movie/:id" element={<MovieDetail />}></Route>
           <Route path="/movies/:type" element={<MovieList />}></Route>
-          <Route path="/*" element={<h2>404 Error Page</h2>}></Route>
+          <Route path="/*" element={<Error />}></Route>
         </Routes>
       </Router>
-      <Footer />
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }
