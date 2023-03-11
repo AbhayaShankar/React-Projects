@@ -120,3 +120,8 @@
   color: rgb(176, 174, 174);
   font-family: "Montserrat", sans-serif;
 }
+
+.about__author {
+  text-decoration: none;
+  color: white;
+}

@@ -111,11 +111,24 @@ const MovieDetail = () => {
             <div className="review__top">
               <div>
                 {review.author_details.avatar_path ? (
-                  <img
-                    className="review__author__img"
-                    src={`https://image.tmdb.org/t/p/original${review.author_details.avatar_path}`}
-                    alt="n"
-                  />
+                  <div>
+                    {console.log(review.author_details.avatar_path.slice(1))}
+                    {review.author_details.avatar_path.startsWith(
+                      "/https://"
+                    ) ? (
+                      <img
+                        className="review__author__img"
+                        src={review.author_details.avatar_path.slice(1)}
+                        alt=""
+                      />
+                    ) : (
+                      <img
+                        className="review__author__img"
+                        src={`https://image.tmdb.org/t/p/original${review.author_details.avatar_path}`}
+                        alt=""
+                      />
+                    )}
+                  </div>
                 ) : (
                   <AccountCircleIcon sx={{ fontSize: 48, color: "#c9c9c9" }} />
                 )}

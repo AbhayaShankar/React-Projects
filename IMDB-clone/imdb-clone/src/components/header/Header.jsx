@@ -38,7 +38,11 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
         </form>
       </div>
       <div className="header-right-right">
-        <h3>Abhaya</h3>
+        <h3>
+          <a className="about__author" href="">
+            Abhaya
+          </a>
+        </h3>
         <AccountCircleIcon sx={{ fontSize: 32, color: "#c9c9c9" }} />
       </div>
     </div>
