@@ -16,6 +16,7 @@ const MovieDetail = () => {
   useEffect(() => {
     getData();
     getReviews();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   const getReviews = async () => {
@@ -92,14 +93,17 @@ const MovieDetail = () => {
         </div>
         <div className="movie__links">
           <div className="movie__link">
-            <a href={`https://www.imdb.com/title/${detail.imdb_id}`}>
+            <a
+              href={`https://www.imdb.com/title/${detail.imdb_id}`}
+              target="_blank"
+            >
               {" "}
               IMDB
               <OpenInNewRoundedIcon style={{ color: "#fdc501" }} />
             </a>
           </div>
           <div className="movie__link">
-            <a href={detail.homepage}>
+            <a href={detail.homepage} target="_blank">
               {" "}
               HOME
               <OpenInNewRoundedIcon style={{ color: "#fdc501" }} />
@@ -128,9 +132,7 @@ const MovieDetail = () => {
                 {review.author_details.avatar_path ? (
                   <div>
                     {console.log(review.author_details.avatar_path.slice(1))}
-                    {review.author_details.avatar_path.startsWith(
-                      "/https://"
-                    ) ? (
+                    {review.author_details.avatar_path.startsWith("/https:") ? (
                       <img
                         className="review__author__img"
                         src={review.author_details.avatar_path.slice(1)}

@@ -8,6 +8,11 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 function Header({ search, setSearch, handleChange, handleSearch }) {
   const handleHome = () => {
     setSearch("");
+    scrollToTop();
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -16,10 +21,18 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
         <Link onClick={handleHome} to="/">
           <p className="cinetrek"> Cinetrek</p>
         </Link>
-        <Link to="/movies/popular">Popular</Link>
-        <Link to="/movies/top_rated">Top Rated</Link>
-        <Link to="/movies/upcoming">Upcoming</Link>
-        <Link to="/about">About</Link>
+        <Link onClick={scrollToTop} to="/movies/popular">
+          Popular
+        </Link>
+        <Link onClick={scrollToTop} to="/movies/top_rated">
+          Top Rated
+        </Link>
+        <Link onClick={scrollToTop} to="/movies/upcoming">
+          Upcoming
+        </Link>
+        <Link onClick={scrollToTop} to="/about">
+          About
+        </Link>
       </div>
       <div className="header-right">
         <SearchIcon
