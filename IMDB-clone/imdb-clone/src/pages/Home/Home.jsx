@@ -92,11 +92,15 @@ function Home({ search, dispSearch, setDispSearch, setSearch }) {
                         {" "}
                         {movie.vote_average}
                         <StarIcon
+                          style={{}}
                           sx={{
                             color: "#ffc600",
                             fontSize: "32px",
                             paddingTop: "6px",
                             marginLeft: "6px",
+                            ...`@media only screen and (max-width: 768px) {
+                              font-size: 24px;
+                            }`,
                           }}
                         />
                       </span>

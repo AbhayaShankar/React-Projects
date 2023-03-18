@@ -47,11 +47,18 @@
 
 @media only screen and (max-width: 600px) {
   .footer__author {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .footer__left {
     display: none;
+    margin-left: 0;
+  }
+
+  .socials {
+    width: 200px;
+    gap: 20px;
+    margin-left: 0;
   }
 
   .icon {

@@ -167,6 +167,7 @@
   .header-left {
     display: flex;
     justify-content: space-between;
+    margin-left: 10px;
   }
   .header-left a:not(:first-child) {
     display: none;
@@ -191,5 +192,8 @@
   }
   .header__hamburger:focus + .header__dropdown {
     display: flex;
+  }
+  .cinetrek {
+    margin-left: 0px;
   }
 }
