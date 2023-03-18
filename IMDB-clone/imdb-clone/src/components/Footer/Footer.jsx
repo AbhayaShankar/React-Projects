@@ -12,25 +12,28 @@ function Footer() {
       <div className="socials">
         <a href="https://twitter.com/AbhayaShankar2">
           <TwitterIcon
-            // className="icon"
+            className="icon"
             color="disabled"
             sx={{ color: "#ffffff99 ", "&:hover": { color: "#1d9bf0" } }}
           />
         </a>
         <a href="https://github.com/AbhayaShankar">
           <GitHubIcon
+            className="icon"
             color="disabled"
             sx={{ color: "#ffffff99 ", "&:hover": { color: "#000000" } }}
           />
         </a>
         <a href="https://www.linkedin.com/in/abhayashankar/">
           <LinkedInIcon
+            className="icon"
             color="disabled"
             sx={{ color: "#ffffff99 ", "&:hover": { color: "#0a66c2" } }}
           />
         </a>
         <a href="https://www.instagram.com/abhaya_shankar05/">
           <InstagramIcon
+            className="icon"
             color="disabled"
             sx={{ color: "#ffffff99 ", "&:hover": { color: "#bb2c6f" } }}
           />

@@ -88,3 +88,30 @@
 .poster__overlay:hover {
   opacity: 1;
 }
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .hero__container {
+    margin-top: 0;
+  }
+
+  .poster__overlay {
+    padding: 3.5rem 1.5rem;
+    opacity: 0.6;
+  }
+
+  .poster__title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .poster__release {
+    /* display: none; */
+    font-size: 0.8rem;
+  }
+
+  .poster__desc {
+    width: 400px;
+
+    font-size: 0.8rem;
+  }
+}
