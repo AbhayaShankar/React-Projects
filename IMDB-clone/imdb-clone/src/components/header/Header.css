@@ -168,12 +168,13 @@
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
+    display: none;
   }
   .header-left a:not(:first-child) {
     display: none;
   }
   .header-right {
-    display: none;
+    /* display: none; */
   }
   .header__hamburger {
     display: flex;
