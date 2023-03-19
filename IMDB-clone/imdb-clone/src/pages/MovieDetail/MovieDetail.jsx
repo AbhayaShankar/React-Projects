@@ -114,7 +114,7 @@ const MovieDetail = () => {
       <div className="movie__reviews">
         {review.length > 0 ? (
           <div className="no__reviews">
-            <img src={cinema} alt="" />
+            <img className="review__img" src={cinema} alt="" />
             <h1 className="review__head">Why Watch this? Honest Reviews - </h1>
           </div>
         ) : (

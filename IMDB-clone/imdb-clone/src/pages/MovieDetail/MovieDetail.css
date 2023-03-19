@@ -222,3 +222,52 @@
 .review__url:hover {
   color: #ffc600;
 }
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .movie__container {
+    position: relative;
+  }
+
+  .movie__banner {
+    display: none;
+  }
+
+  .movie__poster {
+    position: absolute;
+    top: 350px;
+    height: 350px;
+    width: 250px;
+    left: -150px;
+  }
+
+  .movie__details__ {
+    position: absolute;
+    max-width: 400px;
+    top: 620px;
+    left: 10px;
+    padding: 10px;
+  }
+
+  .movie__links {
+    position: absolute;
+    top: 850px;
+    left: 30px;
+  }
+
+  .movie__reviews {
+    max-width: 400px;
+    padding: 15px;
+    margin-top: 90px;
+    margin-bottom: 10px;
+  }
+
+  .review__img {
+    height: 12px;
+    width: 20px;
+    /* margin-top: 20px; */
+  }
+
+  .review__head {
+    font-size: 24px;
+  }
+}
