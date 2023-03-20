@@ -18,3 +18,9 @@ body {
   color: white;
   height: 105vh;
 }
+
+/* @media (min-width: 400px) {
+  body {
+    min-width: 400px;
+  }
+} */

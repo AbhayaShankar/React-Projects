@@ -55,6 +55,20 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
       </div>
       <div className="header__hamburger">
         <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
+        {/* <div className="header-left toggle__links">
+          <Link onClick={scrollToTop} to="/movies/popular">
+            Popular
+          </Link>
+          <Link onClick={scrollToTop} to="/movies/top_rated">
+            Top Rated
+          </Link>
+          <Link onClick={scrollToTop} to="/movies/upcoming">
+            Upcoming
+          </Link>
+          <Link onClick={scrollToTop} to="/about">
+            About
+          </Link>
+        </div> */}
       </div>
     </div>
   );
