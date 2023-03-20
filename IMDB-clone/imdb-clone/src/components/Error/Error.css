@@ -61,7 +61,7 @@
   border: 1px solid rgb(203, 203, 203);
 }
 
-@media only screen and (min-width: 400px) and (max-width: 600px) {
+@media only screen and (min-width: 380px) and (max-width: 600px) {
   .error__img {
     top: 100px;
     height: 400px;

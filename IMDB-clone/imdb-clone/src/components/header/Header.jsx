@@ -54,7 +54,12 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
         </form>
       </div>
       <div className="header__hamburger">
-        <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
+        <Hamburger
+          toggled={isOpen}
+          label="Show menu"
+          toggle={setOpen}
+          size={24}
+        />
         {/* <div className="header-left toggle__links">
           <Link onClick={scrollToTop} to="/movies/popular">
             Popular
