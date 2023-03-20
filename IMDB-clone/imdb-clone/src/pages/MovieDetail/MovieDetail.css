@@ -249,15 +249,16 @@
   }
 
   .movie__links {
-    position: absolute;
-    top: 850px;
+    position: relative;
+    top: 0px;
     left: 30px;
+    padding-bottom: 100px;
   }
 
   .movie__reviews {
     max-width: 400px;
     padding: 15px;
-    margin-top: 90px;
+    margin-top: 190px;
     margin-bottom: 10px;
   }
 
@@ -269,5 +270,9 @@
 
   .review__head {
     font-size: 24px;
+  }
+
+  .no__reviews {
+    height: 180px;
   }
 }

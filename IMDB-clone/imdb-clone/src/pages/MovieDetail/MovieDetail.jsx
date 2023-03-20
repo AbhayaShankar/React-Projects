@@ -83,6 +83,25 @@ const MovieDetail = () => {
                   ))
                 : ""}
             </div>
+            <div className="movie__links">
+              <div className="movie__link">
+                <a
+                  href={`https://www.imdb.com/title/${detail.imdb_id}`}
+                  target="_blank"
+                >
+                  {" "}
+                  IMDB
+                  <OpenInNewRoundedIcon style={{ color: "#fdc501" }} />
+                </a>
+              </div>
+              <div className="movie__link">
+                <a href={detail.homepage} target="_blank">
+                  {" "}
+                  HOME
+                  <OpenInNewRoundedIcon style={{ color: "#fdc501" }} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="movie__poster">
@@ -90,25 +109,6 @@ const MovieDetail = () => {
             src={`https://image.tmdb.org/t/p/original${detail.poster_path}`}
             alt=""
           />
-        </div>
-        <div className="movie__links">
-          <div className="movie__link">
-            <a
-              href={`https://www.imdb.com/title/${detail.imdb_id}`}
-              target="_blank"
-            >
-              {" "}
-              IMDB
-              <OpenInNewRoundedIcon style={{ color: "#fdc501" }} />
-            </a>
-          </div>
-          <div className="movie__link">
-            <a href={detail.homepage} target="_blank">
-              {" "}
-              HOME
-              <OpenInNewRoundedIcon style={{ color: "#fdc501" }} />
-            </a>
-          </div>
         </div>
       </div>
       <div className="movie__reviews">
