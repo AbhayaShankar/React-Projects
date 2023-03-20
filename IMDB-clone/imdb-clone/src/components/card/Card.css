@@ -101,3 +101,10 @@
   font-size: 12px;
   color: azure;
 }
+
+@media only screen and (min-width: 400px) and(max-width: 600px) {
+  .cards__img {
+    height: 200px;
+    width: 300px;
+  }
+}

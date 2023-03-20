@@ -44,87 +44,26 @@
     background-position: 500%;
   }
 }
-/* 
-@keyframes color-change {
-  0% {
-    color: #bababa;
-    background-position: 0;
-  }
-  5% {
-    background-position: 100vh;
-  }
-  10% {
-    color: #bababa;
-    background-position: 0;
-  }
-  15% {
-    background-position: 100vh;
-  }
-  20% {
-    color: #bababa;
-    background-position: 0;
-  }
-  25% {
-    background-position: 100vh;
-  }
-  30% {
-    color: #bababa;
-    background-position: 0;
-  }
-  35% {
-    background-position: 100vh;
-  }
-  40% {
-    color: #bababa;
-    background-position: 0;
-  }
-  45% {
-    background-position: 100vh;
-  }
-  50% {
-    color: #bababa;
-    background-position: 0;
-  }
-  55% {
-    background-position: 100vh;
-  }
-  60% {
-    color: #bababa;
-    background-position: 0;
-  }
-  65% {
-    background-position: 100vh;
-  }
-  70% {
-    color: #bababa;
-    background-position: 0;
-  }
-  75% {
-    background-position: 100vh;
-  }
-  80% {
-    color: #bababa;
-    background-position: 0;
-  }
-  85% {
-    background-position: 100vh;
-  }
-  90% {
-    color: #bababa;
-    background-position: 0;
-  }
-  95% {
-    background-position: 100vh;
-  }
-  100% {
-    color: #bababa;
-    background-position: 0;
-  }
-} */
 
 .list__cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .movieList__title {
+    font-size: 24px;
+    max-width: 350px;
+    margin-top: 10px;
+  }
+
+  .movie__list__container {
+    margin-top: 40px;
+  }
+
+  .movie__list {
+    padding: -30px 3rem 2rem 3rem;
+  }
 }

@@ -112,8 +112,9 @@
   position: absolute;
   display: flex;
   gap: 35px;
-  left: 650px;
-  top: 575px;
+  /* left: 650px;
+  top: 575px; */
+  left: 50px;
   margin-top: 40px;
 }
 
