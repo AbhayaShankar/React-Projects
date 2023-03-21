@@ -216,6 +216,7 @@
 
   .header-left ul {
     margin-top: 170px;
+    display: flex;
     flex-direction: column;
     gap: 45px;
   }
@@ -231,7 +232,7 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
-    height: 100vh;
+    height: 700px;
     width: 100%;
     background-color: #202124;
     color: #fff;

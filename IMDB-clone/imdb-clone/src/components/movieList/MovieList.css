@@ -13,6 +13,7 @@
 .movieList__title {
   font-size: 2rem;
   margin: 3rem;
+  padding-top: 3rem;
   color: rgb(178, 176, 176);
   letter-spacing: 5px;
   font-weight: 400;
@@ -58,6 +59,8 @@
     max-width: 350px;
     margin-top: 80px;
     line-height: 30px;
+    padding-top: 10px;
+    margin-bottom: 15px;
   }
 
   .movie__list__container {
