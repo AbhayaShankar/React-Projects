@@ -10,8 +10,12 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
   const navRef = useRef();
   const [isOpen, setOpen] = useState(false);
 
-  const showNavbar = () => {
-    navRef.current.classList.toggle("toggle__nav");
+  // const showNavbar = () => {
+  //   navRef.current.classList.toggle("toggle__nav");
+  // };
+
+  const showNavbar = (bool) => {
+    setOpen(bool);
   };
 
   const handleHome = () => {
@@ -25,7 +29,7 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
 
   return (
     <div className="header">
-      <div className="header-left toggle__nav">
+      <div className={`header-left ${isOpen ? "toggle__nav" : null} `}>
         <Link onClick={handleHome} to="/">
           <p className="cinetrek"> Cinetrek</p>
         </Link>
@@ -62,25 +66,19 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
       <div className="header__hamburger">
         <Hamburger
           // onClick={showNavbar}
-          toggled={isOpen}
+          duration={0.15}
           label="Show menu"
-          toggle={setOpen}
           size={24}
+          onToggle={(toggle) => {
+            if (toggle) {
+              console.log("open Menu");
+              showNavbar(true);
+            } else {
+              console.log("close Menu");
+              showNavbar(false);
+            }
+          }}
         />
-        {/* <div className="header-left toggle__links">
-          <Link onClick={scrollToTop} to="/movies/popular">
-            Popular
-          </Link>
-          <Link onClick={scrollToTop} to="/movies/top_rated">
-            Top Rated
-          </Link>
-          <Link onClick={scrollToTop} to="/movies/upcoming">
-            Upcoming
-          </Link>
-          <Link onClick={scrollToTop} to="/about">
-            About
-          </Link>
-        </div> */}
       </div>
     </div>
   );
