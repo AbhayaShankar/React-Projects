@@ -25,26 +25,43 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    showNavbar(false);
+    setOpen(false);
   };
 
   return (
     <div className="header">
       <div className={`header-left ${isOpen ? "toggle__nav" : null} `}>
-        <Link onClick={handleHome} to="/">
-          <p className="cinetrek"> Cinetrek</p>
-        </Link>
-        <Link onClick={scrollToTop} to="/movies/popular">
-          Popular
-        </Link>
-        <Link onClick={scrollToTop} to="/movies/top_rated">
-          Top Rated
-        </Link>
-        <Link onClick={scrollToTop} to="/movies/upcoming">
-          Upcoming
-        </Link>
-        <Link onClick={scrollToTop} to="/about">
-          About
-        </Link>
+        <ul>
+          <li>
+            <Link onClick={handleHome} to="/">
+              <p className="cinetrek"> Cinetrek</p>
+            </Link>
+          </li>
+          <li>
+            <Link onClick={scrollToTop} to="/movies/popular">
+              Popular
+            </Link>
+          </li>
+
+          <li>
+            <Link onClick={scrollToTop} to="/movies/top_rated">
+              Top Rated
+            </Link>
+          </li>
+
+          <li>
+            <Link onClick={scrollToTop} to="/movies/upcoming">
+              Upcoming
+            </Link>
+          </li>
+
+          <li>
+            <Link onClick={scrollToTop} to="/about">
+              About
+            </Link>
+          </li>
+        </ul>
       </div>
       <div className="header-right">
         <SearchIcon
@@ -66,7 +83,6 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
       <div className="header__hamburger">
         <Hamburger
           // onClick={showNavbar}
-          // style={{cursor: "pointer", height: "48px", position: "relative" , transition: "all 0.4s cubic-bezier(0, 0, 0, 1) 0s", user-select: "none", width: "48px", outline: "none", transform: "rotate(-90deg)"}}
           duration={0.15}
           label="Show menu"
           size={24}
