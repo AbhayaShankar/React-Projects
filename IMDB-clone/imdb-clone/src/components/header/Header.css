@@ -222,4 +222,17 @@
 
   .toggle__links {
   }
+
+  /* .toggle__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #202124;
+    color: #fff;
+    position: absolute;
+    visibility: hidden;
+    opacity: 1;
+  } */
 }

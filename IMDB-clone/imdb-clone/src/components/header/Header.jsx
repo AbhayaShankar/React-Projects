@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Spin as Hamburger } from "hamburger-react";
 import imdb from "../../media/imdb.png";
@@ -7,7 +7,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Header({ search, setSearch, handleChange, handleSearch }) {
+  const navRef = useRef();
   const [isOpen, setOpen] = useState(false);
+
+  const showNavbar = () => {
+    navRef.current.classList.toggle("toggle__nav");
+  };
+
   const handleHome = () => {
     setSearch("");
     scrollToTop();
@@ -19,7 +25,7 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
 
   return (
     <div className="header">
-      <div className="header-left">
+      <div className="header-left toggle__nav">
         <Link onClick={handleHome} to="/">
           <p className="cinetrek"> Cinetrek</p>
         </Link>
@@ -55,6 +61,7 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
       </div>
       <div className="header__hamburger">
         <Hamburger
+          // onClick={showNavbar}
           toggled={isOpen}
           label="Show menu"
           toggle={setOpen}
