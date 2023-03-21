@@ -66,6 +66,7 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
       <div className="header__hamburger">
         <Hamburger
           // onClick={showNavbar}
+          // style={{cursor: "pointer", height: "48px", position: "relative" , transition: "all 0.4s cubic-bezier(0, 0, 0, 1) 0s", user-select: "none", width: "48px", outline: "none", transform: "rotate(-90deg)"}}
           duration={0.15}
           label="Show menu"
           size={24}
