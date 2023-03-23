@@ -11,7 +11,9 @@ import Error from "./components/Error/Error";
 
 function App() {
   const [search, setSearch] = useState("");
+  const [searchDisable, setSearchDisable] = useState(true);
   const [dispSearch, setDispSearch] = useState(false);
+  const [isHome, setIsHome] = useState(true);
 
   const handleChange = (e) => {
     console.log(e.target.value);
@@ -26,7 +28,9 @@ function App() {
     <div className="app">
       <Router>
         <Header
+          searchDisable={searchDisable}
           search={search}
+          setSearchDisable={setSearchDisable}
           handleChange={handleChange}
           handleSearch={handleSearch}
           setSearch={setSearch}
@@ -37,6 +41,7 @@ function App() {
             path="/"
             element={
               <Home
+                setSearchDisable={setSearchDisable}
                 setSearch={setSearch}
                 search={search}
                 dispSearch={dispSearch}
@@ -46,7 +51,10 @@ function App() {
           ></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/movie/:id" element={<MovieDetail />}></Route>
-          <Route path="/movies/:type" element={<MovieList />}></Route>
+          <Route
+            path="/movies/:type"
+            element={<MovieList setSearchDisable={setSearchDisable} />}
+          ></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </Router>

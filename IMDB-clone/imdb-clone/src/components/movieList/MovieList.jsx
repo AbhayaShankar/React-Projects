@@ -5,10 +5,14 @@ import "./MovieList.css";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-function MovieList() {
+function MovieList({ setSearchDisable }) {
   const [movieList, setMovieList] = useState([]);
   const { type } = useParams();
   const [isLoading, setIsLoading] = useState(true);
+
+  const disableSearch = () => {
+    setSearchDisable(false);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -39,6 +43,7 @@ function MovieList() {
     console.log(result);
     setMovieList(result);
     setIsLoading(false);
+    disableSearch();
   };
 
   return (

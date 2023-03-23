@@ -6,7 +6,14 @@ import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-function Header({ search, setSearch, handleChange, handleSearch }) {
+function Header({
+  search,
+  setSearch,
+  handleChange,
+  handleSearch,
+  setSearchDisable,
+  searchDisable,
+}) {
   const navRef = useRef();
   const [isOpen, setOpen] = useState(false);
 
@@ -35,7 +42,10 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
         <ul>
           <li>
             <Link onClick={handleHome} to="/">
-              <p className="cinetrek"> Cinetrek</p>
+              <span className="cinetrek">
+                <span className="dash">-</span> Cinetrek{" "}
+                <span className="dash">-</span>
+              </span>
             </Link>
           </li>
           <li>
@@ -63,23 +73,25 @@ function Header({ search, setSearch, handleChange, handleSearch }) {
           </li>
         </ul>
       </div>
-      <div className="header-right">
-        <SearchIcon
-          className="header__search__icon"
-          sx={{ color: "#c9c9c9" }}
-        />
-        {/* <h3>Search Box</h3> */}
-        <form className="form" type="search">
-          <input
-            type="text"
-            className="search__form"
-            onChange={handleChange}
-            value={search}
-            onKeyDown={handleSearch}
-            placeholder="Enter your search"
+      {searchDisable && (
+        <div className="header-right">
+          <SearchIcon
+            className="header__search__icon"
+            sx={{ color: "#c9c9c9" }}
           />
-        </form>
-      </div>
+          {/* <h3>Search Box</h3> */}
+          <form className="form" type="search">
+            <input
+              type="text"
+              className="search__form"
+              onChange={handleChange}
+              value={search}
+              onKeyDown={handleSearch}
+              placeholder="Enter your search"
+            />
+          </form>
+        </div>
+      )}
       <div className="header__hamburger">
         <Hamburger
           // onClick={showNavbar}

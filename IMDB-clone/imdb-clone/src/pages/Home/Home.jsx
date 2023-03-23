@@ -9,7 +9,13 @@ import { Icon } from "@mui/material";
 import MovieList from "../../components/movieList/MovieList";
 import SearchComp from "../../components/SearchComp/SearchComp";
 
-function Home({ search, dispSearch, setDispSearch, setSearch }) {
+function Home({
+  search,
+  dispSearch,
+  setDispSearch,
+  setSearch,
+  setSearchDisable,
+}) {
   const [popularMovies, setPopularMovies] = useState([]);
 
   const [searchMovie, setSearchMovie] = useState(search);
@@ -44,7 +50,7 @@ function Home({ search, dispSearch, setDispSearch, setSearch }) {
       setSearchMovie(data.results);
       console.log("search data", data);
     };
-
+    setSearchDisable(true);
     getSearchMovie();
   }, [search]);
 
