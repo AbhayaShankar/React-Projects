@@ -49,13 +49,19 @@ function App() {
               />
             }
           ></Route>
-          <Route path="/about" element={<About />}></Route>
+          <Route
+            path="/about"
+            element={<About setSearchDisable={setSearchDisable} />}
+          ></Route>
           <Route path="/movie/:id" element={<MovieDetail />}></Route>
           <Route
             path="/movies/:type"
             element={<MovieList setSearchDisable={setSearchDisable} />}
           ></Route>
-          <Route path="/*" element={<Error />}></Route>
+          <Route
+            path="/*"
+            element={<Error setSearchDisable={setSearchDisable} />}
+          ></Route>
         </Routes>
       </Router>
       <div className="footer">

@@ -185,7 +185,7 @@
     /* padding: 0 -10px; */
     padding: 4px 0;
     justify-content: space-evenly;
-    transition: all 0.25s ease-in;
+    transition: all 0.5s ease-in-out;
   }
 
   .header__hamburger {
@@ -222,8 +222,8 @@
 
     justify-content: space-between;
     display: none;
-    transition: 1200ms ease-in-out;
-    transform: translate(-100%);
+    transition: all 1200ms ease-in-out;
+    transform: translateY(-100%);
     /* gap: 10px; */
   }
 
@@ -256,8 +256,8 @@
     position: absolute;
     z-index: 100;
     opacity: 1;
-    transform: translate(0);
-    transition: 1200ms ease-in-out;
+    transform: translateY(0);
+    transition: all 1200ms ease-in-out;
   }
 
   .header-left ul li:first-child {
