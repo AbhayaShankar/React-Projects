@@ -1,6 +1,7 @@
 .movie__container {
   position: relative;
   height: 100%;
+  background-color: #141414;
   padding-bottom: 850px;
 }
 
