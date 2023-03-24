@@ -5,7 +5,7 @@ const ChatInput = () => {
   return (
     <div className="relative">
       <textarea
-        className="w-[57vw] max-h-36 min-h-[80px] outline-none bg-white bg-opacity-10 px-4 py-2 tracking-wider  text-[13px] rounded-lg overflow-auto "
+        className="w-[57vw] max-h-[200px] h-[80px] outline-none bg-white bg-opacity-10 px-4 py-2 pr-5 tracking-wider text-[13px] rounded-lg overflow-auto "
         rows={2}
       />
       {/* <input
