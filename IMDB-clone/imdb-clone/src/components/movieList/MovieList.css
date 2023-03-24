@@ -14,7 +14,7 @@
 
 .movieList__title {
   font-size: 2rem;
-  background-color: #141414;
+  /* background-color: #141414; */
   margin: 3rem;
   padding-top: 3rem;
   color: rgb(178, 176, 176);
@@ -29,13 +29,12 @@
     #595959
   );
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   animation: animate 3s linear infinite;
   background: linear-gradient(90deg, #000, #fff, #000);
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 3s linear infinite;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text !important;
   -webkit-text-fill-color: rgba(173, 173, 173, 0.603);
   /* animation: color-change 3s ease-in-out 3s infinite; */
 }

@@ -76,7 +76,7 @@
 }
 
 .movie__genre {
-  padding: 0.5rem;
+  padding: 6px 12px;
   border: 2px solid white;
   border-radius: 20px;
   margin-right: 1rem;
@@ -90,8 +90,11 @@
 }
 
 .movie__genre:hover {
-  background-color: rgba(240, 255, 255, 0.677);
-  color: black;
+  background-color: rgba(240, 255, 255, 0.568);
+  color: #141414;
+  font-weight: 600;
+  backdrop-filter: blur(200px);
+  border: 2px solid rgba(219, 219, 219, 0.185);
 }
 
 .movie__poster {
