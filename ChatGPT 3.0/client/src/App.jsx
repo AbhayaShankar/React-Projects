@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ChatBody from "./components/ChatBody";
+import ChatInput from "./components/ChatInput";
 
 function App() {
   return (
@@ -14,12 +15,14 @@ function App() {
       <div className="gradient-03 absolute z-0"></div>
 
       {/* Body */}
-      <div>
+      <div className="h-[90%] overflow-auto w-full max-w-[900px] min-w-[200px] py-8 px-5 self-center">
         <ChatBody />
       </div>
 
       {/* Input box */}
-      <div>Input box</div>
+      <div className="flex items-center justify-center w-full max-w-[900px] min-w-[200px] self-center">
+        <ChatInput />
+      </div>
     </div>
   );
 }
