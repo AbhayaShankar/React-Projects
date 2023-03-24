@@ -13,6 +13,11 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+  scroll-step: 2;
+}
+
 .gradient-01 {
   top: -150px;
   width: 200px;
