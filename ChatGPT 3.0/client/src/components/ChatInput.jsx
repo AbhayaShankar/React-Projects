@@ -22,7 +22,7 @@ const ChatInput = ({ sendMessage, loading }) => {
           />
         )}
         <textarea
-          className="w-[57vw] max-h-[200px] min-h-[80px] outline-none bg-white bg-opacity-10 px-4 py-2 pr-5 tracking-wider text-[13px] rounded-lg overflow-auto pt-5"
+          className="w-[80vw] sm:w-[57vw] max-h-[200px] min-h-[80px] outline-none bg-white bg-opacity-10 px-4 py-2 pr-5 tracking-wider text-[13px] rounded-lg overflow-auto pt-5"
           onKeyDown={(e) => {
             e.keyCode === 13 && e.shiftKey === false && handleSubmit();
           }}
