@@ -3,6 +3,12 @@ import ChatBody from "./components/ChatBody";
 import ChatInput from "./components/ChatInput";
 
 function App() {
+  const [chat, setChat] = useState([]);
+
+  const sendMessage = async (message) => {
+    await Promise.resolve(setChat((prev) => [...prev, message]));
+  };
+
   return (
     <div className="bg-[#242627] text-white h-screen py-6 relative sm:px-28 overflow-hidden flex flex-col justify-between align-middle">
       {/* Header */}
@@ -16,12 +22,12 @@ function App() {
 
       {/* Body */}
       <div className="h-[90%] overflow-auto w-full max-w-[900px] min-w-[200px] py-8 px-5 self-center">
-        <ChatBody />
+        <ChatBody chat={chat} />
       </div>
 
       {/* Input box */}
       <div className="flex items-center justify-center w-full max-w-[900px] min-w-[200px] self-center">
-        <ChatInput />
+        <ChatInput sendMessage={sendMessage} />
       </div>
     </div>
   );
