@@ -1,12 +1,26 @@
 import React, { useState } from "react";
 import ChatBody from "./components/ChatBody";
 import ChatInput from "./components/ChatInput";
+import { useMutation } from "react-query";
+import { fetchResponse } from "./api";
 
 function App() {
   const [chat, setChat] = useState([]);
 
+  const mutation = useMutation({
+    mutationFn: () => {
+      return fetchResponse(chat);
+    },
+    onSuccess: (data) =>
+      setChat((prev) => [
+        ...prev,
+        { sender: "ai", message: data.message.replace(/^\n\n/, "") },
+      ]),
+  });
+
   const sendMessage = async (message) => {
     await Promise.resolve(setChat((prev) => [...prev, message]));
+    mutation.mutate();
   };
 
   return (
@@ -27,7 +41,7 @@ function App() {
 
       {/* Input box */}
       <div className="flex items-center justify-center w-full max-w-[900px] min-w-[200px] self-center">
-        <ChatInput sendMessage={sendMessage} />
+        <ChatInput sendMessage={sendMessage} loading={mutation.isLoading} />
       </div>
     </div>
   );

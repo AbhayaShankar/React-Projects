@@ -1,28 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import autoAnimate from "@formkit/auto-animate";
 
 const ChatBody = ({ chat }) => {
   const aiStyle =
     "bg-[#8AEA92] backdrop-blur-lg mr-auto dropshadow-md bg-opacity-20";
 
-  return (
-    <div>
-      <div className="flex flex-col gap-5">
-        {chat.map((message, i) => {
-          return (
-            <div
-              key={i}
-              className={`border-[#999999] break-words self-end border-2 max-w-[80% ] rounded-[20px] text-[13px] px-4 py-1 tracking-wider leading-[22px] ${
-                message.sender === "ai" && aiStyle
-              }`}
-            >
-              <pre className="whitespace-pre-wrap">
-                <span>{message.message}</span>
-              </pre>
-            </div>
-          );
-        })}
+  const parent = useRef(null);
 
-        {/* <div
+  useEffect(() => {
+    parent.current && autoAnimate(parent.current);
+  }, [parent]);
+
+  return (
+    <div className="flex flex-col gap-5" ref={parent}>
+      {chat.map((message, i) => {
+        return (
+          <div
+            key={i}
+            className={`border-[#999999] break-words self-end border-2 max-w-[80% ] rounded-[20px] text-[13px] px-4 py-1 tracking-wider leading-[22px] ${
+              message.sender === "ai" && aiStyle
+            }`}
+          >
+            <pre className="whitespace-pre-wrap">
+              <span>{message.message}</span>
+            </pre>
+          </div>
+        );
+      })}
+
+      {/* <div
           className={`border-[#999999] break-words self-end border-2 max-w-[80%] rounded-[20px] px-4 py-1  text-[13px] mr-auto ${aiStyle} tracking-wider leading-[22px] `}
         >
           <pre className="whitespace-pre-wrap">
@@ -36,7 +42,6 @@ const ChatBody = ({ chat }) => {
             </span>
           </pre>
         </div> */}
-      </div>
     </div>
   );
 };
