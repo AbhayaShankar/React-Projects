@@ -6,10 +6,17 @@ const ChatBody = ({ chat }) => {
     "bg-[#8AEA92] backdrop-blur-lg mr-auto dropshadow-md bg-opacity-20";
 
   const parent = useRef(null);
+  const bottomref = useRef(null);
 
+  // for auto-animation
   useEffect(() => {
     parent.current && autoAnimate(parent.current);
   }, [parent]);
+
+  // for texts to be visible when the ai generates the resposne
+  useEffect(() => {
+    bottomref.current?.scrollIntoView({ behaviour: "smooth" });
+  }, [chat]);
 
   return (
     <div className="flex flex-col gap-5" ref={parent}>
@@ -27,6 +34,7 @@ const ChatBody = ({ chat }) => {
           </div>
         );
       })}
+      <div ref={bottomref} className="h-1"></div>
 
       {/* <div
           className={`border-[#999999] break-words self-end border-2 max-w-[80%] rounded-[20px] px-4 py-1  text-[13px] mr-auto ${aiStyle} tracking-wider leading-[22px] `}

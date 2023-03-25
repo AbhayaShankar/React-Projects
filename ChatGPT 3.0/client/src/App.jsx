@@ -32,7 +32,7 @@ function App() {
 
       <div className="gradient-01 absolute z-0"></div>
       <div className="gradient-02 absolute z-0"></div>
-      <div className="gradient-03 absolute z-0"></div>
+      {/* <div className="gradient-03 absolute z-0"></div> */}
 
       {/* Body */}
       <div className="h-[90%] overflow-auto w-full max-w-[900px] min-w-[200px] py-8 px-5 self-center">
