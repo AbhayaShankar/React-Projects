@@ -1,9 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import send from "../../media/send.png";
 import loader from "../../media/loader.gif";
 
 const ChatInput = ({ sendMessage, loading }) => {
   const [value, setValue] = useState("");
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    if (textRef.current) {
+      console.log(textRef.current);
+      textRef.current.scrollTop = textRef.current.scrollHeight;
+    }
+  }, [value]);
+
+  const handleInput = (e) => {
+    if (e.key === "Shift") {
+      const cursorPosition = textRef.current.selectionEnd;
+      textRef.current.scrollTop =
+        textRef.current.scrollHeight * (cursorPosition / value.length);
+    }
+  };
+
+  const handlePaste = (event) => {
+    const pastedText = event.clipboardData.getData("text");
+    const currentValue = value;
+    const selectionEnd = textAreaRef.current.selectionEnd;
+    const newValue =
+      currentValue.substring(0, selectionEnd) +
+      pastedText +
+      currentValue.substring(selectionEnd);
+    setValue(newValue);
+    setTimeout(() => {
+      textAreaRef.current.scrollTop = textAreaRef.current.scrollHeight;
+    }, 0);
+  };
 
   const handleSubmit = () => {
     if (value === "") return;
@@ -22,10 +52,13 @@ const ChatInput = ({ sendMessage, loading }) => {
           />
         )}
         <textarea
+          ref={textRef}
           className="w-[80vw] sm:w-[57vw] max-h-[200px] min-h-[80px] outline-none bg-white bg-opacity-10 px-4 py-2 pr-5 tracking-wider text-[13px] rounded-lg overflow-auto pt-5"
           onKeyDown={(e) => {
             e.keyCode === 13 && e.shiftKey === false && handleSubmit();
           }}
+          onInput={handleInput}
+          onPaste={handlePaste}
           value={value}
           type="text"
           onChange={(e) => setValue(e.target.value)}
