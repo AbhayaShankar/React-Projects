@@ -39,12 +39,12 @@ app.post("/", async (req, res) => {
 
   try {
     const response = await openai.createCompletion({
-      model: "gpt-3.5-turbo-0301",
+      model: "text-davinci-003",
       prompt: `${message}`,
       max_tokens: 120,
       temperature: 0.5,
     });
-    res.json({ message: response.data.choices[0].value });
+    res.json({ message: response.data.choices[0].text });
   } catch (error) {
     console.log(err);
     res.send(err).status(400);
